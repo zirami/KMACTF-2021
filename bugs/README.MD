@@ -19,7 +19,7 @@ unsigned __int64 leuleu()
 }
 
 ```
-Ở bài này chúng ta sẽ dùng lỗi bufferOverflow tại hàm `read(0, a1, 72uLL)` trong `info function` khi mà tham số a1 ( là thằng v6 của hàm main) của mình chỉ có 40 byte.
+Ở bài này mình sẽ dùng lỗi bufferOverflow tại hàm `read(0, a1, 72uLL)` trong `info function` khi mà tham số a1 ( là thằng v6 của hàm main) của mình chỉ có 40 byte.
 Mình sẽ thay đổi địa chỉ của `ret` của hàm main thành địa chỉ của hàm `leuleu`. Nhưng vấn đề gặp phải là chương trình có `Stack canary` buộc mình phải by pass nó. 
 ## Các bước mình thực hiện:
 * Leak được địa chỉ trong stack, tìm offset từ địa chỉ leak được tới địa chỉ của canary, và của V[5].

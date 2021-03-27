@@ -55,7 +55,11 @@ char *__fastcall vuln(const char *a1)
 Bài này lỗi ngay hàm `strcpy(dest,a1)` vì nó không có giới bạn số lượng copy nên chúng ta sẽ tràn làm sao để kích hoạt `sigsegv_handler function` thế là xong bài này.
 
 Chúng ta chỉ cần truyền vào 1 chuỗi có kích thước lớn hơn dest để kích hoạt segsegv_handler thì chương trình sẽ cho ta flag thôi. :3
+
+Mình debug lúc ở local
 ```sh
 zir@HAZIR:~/Desktop$ ./kcsc aloaloaloaloaloalaoa
 Zir{This_is_flag}
 ```
+
+Còn khi netcat tới server thì sẽ cho mình nhập tham số. Truyền vào tương tự sẽ ra được flag. :3
