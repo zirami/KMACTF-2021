@@ -1,7 +1,7 @@
 
 # Bugs
 
-Bài này mục đích của mình sẽ redirect control flow hàm leuleu của chương trình.
+Bài này mục đích của mình sẽ chuyển hướng control flow vào hàm leuleu của chương trình.
 ```sh
 leuleu function
 unsigned __int64 leuleu()
